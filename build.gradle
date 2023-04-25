@@ -14,39 +14,70 @@ apply plugin: "maven-publish"
 
 version = "${project.minecraft}-${project.modVersion}"
 group = "gohkenytp.armadilloantics"
-archivesBaseName = project.modId
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: "official", version: "${project.minecraft}"
-    accessTransformer = file("src/main/resources/META-INF/accesstransformer.cfg")
+    mappings channel: 'official', version: '1.19.2'
+
     runs {
         client {
-            workingDirectory project.file("run")
-            property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
-            property "forge.logging.console.level", "debug"
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'armadilloantics'
+
             mods {
                 armadilloantics {
                     source sourceSets.main
                 }
             }
         }
+
         server {
-            workingDirectory project.file("run")
-            property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
-            property "forge.logging.console.level", "debug"
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'armadilloantics'
+
             mods {
                 armadilloantics {
                     source sourceSets.main
                 }
             }
         }
+
+        gameTestServer {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'armadilloantics'
+
+            mods {
+                armadilloantics {
+                    source sourceSets.main
+                }
+            }
+        }
+
         data {
-            workingDirectory project.file("run")
-            property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
-            property "forge.logging.console.level", "debug"
-            args "--mod", project.modId, "--all", "--output", file("src/generated/resources/"), "--existing", file("src/main/resources"), "--existing-mod", "blueprint"
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'armadilloantics', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
             mods {
                 armadilloantics {
                     source sourceSets.main
