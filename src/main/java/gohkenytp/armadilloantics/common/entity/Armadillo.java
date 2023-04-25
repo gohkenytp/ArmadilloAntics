@@ -4,7 +4,10 @@ import gohkenytp.armadilloantics.core.ArmadilloAntics;
 import gohkenytp.armadilloantics.core.other.tags.ArmadilloAnticsItemTags;
 import gohkenytp.armadilloantics.core.registry.ArmadilloAnticsEntityTypes;
 import gohkenytp.armadilloantics.core.registry.ArmadilloAnticsItems;
+import gohkenytp.armadilloantics.core.registry.ArmadilloAnticsSoundEvents;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -59,4 +62,18 @@ public class Armadillo extends Animal {
         return this.isBaby() ? 0.7F : 1.0F;
     }
 
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ArmadilloAnticsSoundEvents.ARMADILLO_HURT.get();
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+        return ArmadilloAnticsSoundEvents.ARMADILLO_HURT.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ArmadilloAnticsSoundEvents.ARMADILLO_HURT.get();
+    }
 }
