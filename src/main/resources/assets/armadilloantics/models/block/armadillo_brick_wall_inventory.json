@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_inventory",
     "textures": {
-        "wall": "armadilloantics:block/armadillo_shell_block"
+        "wall": "armadilloantics:block/armadillo_brick"
     }
 }

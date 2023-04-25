@@ -1,6 +1,6 @@
 {
     "parent": "block/template_wall_post",
     "textures": {
-        "wall": "armadilloantics:block/armadillo_shell_block"
+        "wall": "armadilloantics:block/armadillo_brick"
     }
 }
