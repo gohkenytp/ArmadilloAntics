@@ -4,6 +4,7 @@ import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import gohkenytp.armadilloantics.client.ArmadilloAnticsModelLayers;
 import gohkenytp.armadilloantics.client.model.ArmadilloModel;
 import gohkenytp.armadilloantics.client.renderer.entity.ArmadilloRenderer;
+import gohkenytp.armadilloantics.common.entity.Armadillo;
 import gohkenytp.armadilloantics.core.data.server.modifiers.ArmadilloAnticsBiomeModifierProvider;
 import gohkenytp.armadilloantics.core.data.server.tags.ArmadilloAnticsBiomeTagsProvider;
 import gohkenytp.armadilloantics.core.data.server.tags.ArmadilloAnticsBlockTagsProvider;
@@ -33,10 +34,10 @@ public class ArmadilloAntics {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
 
+        REGISTRY_HELPER.register(bus);
+
         bus.addListener(this::commonSetup);
         bus.addListener(this::dataSetup);
-
-        REGISTRY_HELPER.register(bus);
 
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
             bus.addListener(this::registerLayerDefinitions);
