@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "armadillo_antics:item/armadillo_shell"
+    "layer0": "armadilloantics:item/armadillo_shell"
   }
 }

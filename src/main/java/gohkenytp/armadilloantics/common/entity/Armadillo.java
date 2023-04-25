@@ -45,5 +45,4 @@ public class Armadillo extends Animal {
                 .add(Attributes.MAX_HEALTH, 4.0D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D);
     }
-
 }
