@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#armadilloantics:has_animal/armadillo",
+  "spawners": {
+    "type": "armadilloantics:armadillo",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 4
+  }
+}

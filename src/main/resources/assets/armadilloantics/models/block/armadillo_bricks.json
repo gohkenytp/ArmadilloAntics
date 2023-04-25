@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "armadilloantics:block/armadillo_shell_block"
+    }
+}

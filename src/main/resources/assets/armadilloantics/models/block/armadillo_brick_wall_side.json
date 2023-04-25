@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_wall_side",
+    "textures": {
+        "wall": "armadilloantics:block/armadillo_shell_block"
+    }
+}
