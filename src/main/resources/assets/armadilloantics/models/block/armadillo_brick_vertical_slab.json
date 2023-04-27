@@ -1,8 +1,0 @@
-{
-    "parent": "armadilloantics:block/vertical_slab",
-    "textures": {
-        "side": "armadilloantics:block/armadillo_brick",
-        "top": "armadilloantics:block/armadillo_brick",
-        "bottom": "armadilloantics:block/armadillo_brick"
-    }
-}

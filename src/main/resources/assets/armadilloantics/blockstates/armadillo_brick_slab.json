@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "armadilloantics:block/armadillo_brick_slab" },
-        "type=top": { "model": "armadilloantics:block/armadillo_brick_slab_top" },
-        "type=double": { "model": "armadilloantics:block/armadillo_bricks" }
-    }
-}
