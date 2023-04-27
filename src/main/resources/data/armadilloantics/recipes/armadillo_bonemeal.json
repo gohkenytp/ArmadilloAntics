@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "armadillo_bonemeal",
+  "ingredients": [
+    {
+      "item": "armadilloantics:armadillo_shell"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:bone_meal"
+  }
+}

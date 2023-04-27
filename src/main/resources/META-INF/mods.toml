@@ -1,0 +1,35 @@
+modLoader = "javafml"
+license="All rights reserved"
+loaderVersion = "[43,)"
+
+[[mods]]
+modId = "armadilloantics"
+version = "${file.jarVersion}"
+itemIcon = "armadilloantics:armadillo_shell"
+configBackground = "armadilloantics:textures/block/armadillo_bricks.png"
+authors = "gohkenytp"
+displayName = "Armadillo Antics"
+description = '''
+    Adds Armadillos to Minecraft
+    '''
+
+[[dependencies.armadilloantics]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2,1.20)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.armadilloantics]]
+modId = "forge"
+mandatory = true
+versionRange = "[43.2.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.armadilloantics]]
+modId = "blueprint"
+mandatory = true
+versionRange = "[6.0.4,)"
+ordering = "AFTER"
+side = "BOTH"
