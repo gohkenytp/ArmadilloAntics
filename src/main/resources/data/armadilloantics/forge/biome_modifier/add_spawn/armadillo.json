@@ -3,8 +3,8 @@
   "biomes": "#armadilloantics:has_animal/armadillo",
   "spawners": {
     "type": "armadilloantics:armadillo",
-    "maxCount": 2,
+    "maxCount": 3,
     "minCount": 1,
-    "weight": 10
+    "weight": 3
   }
 }
